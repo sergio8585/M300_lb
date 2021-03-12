@@ -1,4 +1,3 @@
-# M300_lb
 # Dokumentation M300 LB2
 ## Inhaltsverzechnis
 ## Einleitung
