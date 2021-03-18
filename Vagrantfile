@@ -3,7 +3,7 @@
 #                                         #
 #              Sergio Normani             #
 #                   LB2                   # 
-#                18.03.2021               #
+#                19.03.2021               #
 #                                         #
 #                                         #
 ###########################################
@@ -17,8 +17,6 @@ config.vm.provider "virtualbox" do |vb|
 end
 config.vm.provision "shell", inline: <<-SHELL
   # Packages werden vom lokalen Server geholt
-  # sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
-  sudo apt-get update
   sudo apt-get -y install apache2 
   cd /
   mkdir cronscript
