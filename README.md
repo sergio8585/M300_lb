@@ -1,6 +1,5 @@
 ![Titelblatt_M300](Images/M300_Titelblatt.png)
 
-# Dokumentation M300 LB2
 ## Inhaltsverzechnis
 1. [Einleitung](#Einleitung)
 2. [Grafische Übersicht mit Visio](#Visio)
