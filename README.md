@@ -87,14 +87,12 @@ Rechte auf das Script. (Executable-Rechte)
 
 Script wird ausgeführt und Ergebnisse direkt herausgegeben.
 
-**crontab -l | {  cat; echo "* * * * * /cronscript/run-cronjob.sh"; } | crontab -** 
+**crontab -l | { cat; echo "*/ * * * * /bashscripts/dateproc.sh"; } | crontab -**
 
-Cronjob ist zuständig für das autmatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
+Cronjob ist zuständig für das automatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
 
 ## Testen <a name="testen"></a>
 
 ## Quellenverzeichnis <a name="Quellen"></a>
 
 -Template für Vagrantfile
-
-testest
