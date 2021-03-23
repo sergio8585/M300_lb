@@ -3,7 +3,7 @@
 ## Inhaltsverzechnis
 1. [Einleitung](#Einleitung)
 2. [Grafische Übersicht mit Visio](#Visio)
-3. [Konfigurationen](#Konfigurationen)
+3. [Ablauf](#Ablauf)
 4. [Code im Detail](#Code)
 5. [Testen](#testen)
 6. [Quellenverzechnis](#Quellen)
@@ -18,8 +18,13 @@ Ich habe mich dafür entschieden, einen Webserver mit Ubuntu zu ertsellen. Das P
 ## Grafische Übersicht mit Visio <a name="Visio"></a>
 ![Grafische Übersicht](https://github.com/sergio8585/M300_lb/blob/9f62754186925a6a41e3c6084ae79c1137e1e9d7/Images/LB2_M300_Visio.PNG)
 
+## Ablauf <a name="Ablauf"></a>
 
-## Konfigurationen <a name="Konfigurationen"></a>
+- Gitbash öffnen und ins Verzeichnis (/c/repository/M300_lb) gehen. Dort gibt man dann nur noch den Befehl "vagrant up" aus.
+
+- Danach öffnet man z.B. Chrome und gibt in der Suchleiste http://localhost:8080/prozesse ein. 
+
+- Mit "vagrant destroy" wird die Maschine gelöscht.
 
 ## Code im Detail <a name="Code"></a>
 
