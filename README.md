@@ -87,7 +87,7 @@ Rechte auf das Script. (Executable-Rechte)
 
 Script wird ausgeführt und Ergebnisse direkt herausgegeben.
 
-**crontab -l | { cat; echo "*/2 * * * * /bashscripts/dateproc.sh"; } | crontab -**
+**crontab -l | { cat; echo "* * * * * /bashscripts/dateproc.sh"; } | crontab -**
 
 Cronjob ist zuständig für das autmatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
 
