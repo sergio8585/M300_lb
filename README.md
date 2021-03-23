@@ -42,7 +42,54 @@ Dieser Befehl ist für die Portweiterleitung zuständig. Port 80 = VM und Port 8
 
 **config.vm.synced_folder ".", "/var/www/html"**
 
+Die Files aus /var/www/html sind auch auf dem Hossystem im Ordner mit dem Vagrantfile gespeichert.
 
+**config.vm.provider "virtualbox" do |vb|**
+
+Hypervisor wird definiert (Virtualbox). Konfiguration in Virtualbox wird gestaret.
+
+**vb.memory = "512"**
+
+RAM wird festgelegt (512MB).
+
+**config.vm.provision "shell", inline: <<-SHELL**
+
+Konfiguration wird in der Linuxkonsole gestartet.
+
+**sudo apt-get update**
+**sudo apt-get -y install apache2**
+
+Übliche Befehle in Linux. Appkatalog wird zuerst aktualisiert und danach Apache installiert.
+
+**cd /**
+**mkdir bashscripts**
+**cd bashscripts**
+
+Mit dem ersten Befehl wird ins Root-Verzeichnis geweschselt. Danach den Ordner "bashscripts." Mit dem dritten Befehl wechselt man ins Verzechnis.
+
+**touch dateproc.sh**
+
+Ein neues Shell-Script wird ertsellt.
+
+**echo "env TZ=CET-1 date > /var/www/html/prozesse" > dateproc.sh**
+
+Die aktuelle Zeit wird in Zentraleuropäischerzeit in das File "Prozesse" geschrieben. Vorheriger Inhalt wird überschrieben.
+
+**echo "ps aux >> /var/www/html/prozesse" >> dateproc.sh**
+
+Die Systemprozesse werden in "Prozesse" übernommen.
+
+**chmod +x /bashscripts/dateproc.sh**
+
+Rechte auf das Script. (Executable-Rechte)
+
+**./dateproc.sh**
+
+Script wird ausgeführt und Ergebnisse direkt herausgegeben.
+
+**crontab -l | { cat; echo "* * * * * /bashscripts/dateproc.sh"; } | crontab -**
+
+Cronjob ist zuständig für das autmatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
 
 ## Testen <a name="testen"></a>
 
