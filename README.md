@@ -28,6 +28,22 @@ Ich habe mich dafür entschieden, einen Webserver mit Ubuntu zu ertsellen. Das P
 
 ## Code im Detail <a name="Code"></a>
 
+**Vagrant.configure(2) do |config|**
+
+Konfiguration der Vagrantbox wird gestartet. Die 2 steht für die neuste Version von Vagrant.
+
+**config.vm.box = "ubuntu/xenial64"**
+
+Die VM hat das Betriebssystem Ubuntu/Xenial 64-Bit.
+
+**config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true**
+
+Dieser Befehl ist für die Portweiterleitung zuständig. Port 80 = VM und Port 8080 = Hostsystem. **auto_correct: true** ist dafür zuständig, dass mögliche Kollisionen automatisch korrigiert werden.
+
+**config.vm.synced_folder ".", "/var/www/html"**
+
+
+
 ## Testen <a name="testen"></a>
 
 ## Quellenverzeichnis <a name="Quellen"></a>
