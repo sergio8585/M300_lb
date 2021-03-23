@@ -16,9 +16,8 @@ Da wir nun die nötigen Informationen zur LB2 erhalten haben, stand uns grundsä
 Ich habe mich dafür entschieden, einen Webserver mit Ubuntu zu ertsellen. Das Projekt war nicht allzu kompliziert, jedoch erfüllt es seinen Zweck. Eine VM (Virtualbox) wird nach dem "vagrant up" Befehl gestartet. Danach wird ein Skript erstellt, welches die Systemprozesse anzeigt. Dazu kommt dass die Daten mit Hilfe eines Cronjob immer aktuell bleiben.
 
 ## Grafische Übersicht mit Visio <a name="Visio"></a>
-![Grafische Übersicht](Images/LB2_M300_Visio.png)
+![Grafische Übersicht](https://github.com/sergio8585/M300_lb/blob/9f62754186925a6a41e3c6084ae79c1137e1e9d7/Images/LB2_M300_Visio.PNG)
 
-test
 
 ## Konfigurationen <a name="Konfigurationen"></a>
 
