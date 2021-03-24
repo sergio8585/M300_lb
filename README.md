@@ -93,6 +93,10 @@ Cronjob ist zuständig für das automatische Ausführen des Scripts. Aufgrund de
 
 ## Testen <a name="testen"></a>
 
+Zuerst öffnen SIe Gitbash und gehen ins gewünschte Verzechnis (/c/repository/M300_lb). Danach Befehl "Vagrant Up" eingeben:
+
+![Testing_1](https://github.com/sergio8585/M300_lb/blob/f92e956773e8938aa67d30476bd7f8e704c67b93/Images/Testing_1.PNG)
+
 ## Quellenverzeichnis <a name="Quellen"></a>
 
 -Template für Vagrantfile
