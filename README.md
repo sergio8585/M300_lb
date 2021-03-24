@@ -107,6 +107,10 @@ Nach erneutem Laden sieht man, dass sich die Zeit geändert hat.
 
 ## Quellenverzeichnis <a name="Quellen"></a>
 
--Template für Vagrantfile
+- M300 Web-Template link: (https://github.com/mc-b/M300/tree/master/vagrant/web)
 
-testtest
+- Markdown Basic Syntax Link: (https://www.markdownguide.org/basic-syntax/)
+
+- Cronjob Link: (https://stackoverflow.com/questions/878600/how-to-create-a-cron-job-using-bash-automatically-without-the-interactive-editor)
+
+- Zeitzonen Command Link: (https://unix.stackexchange.com/questions/48101/how-can-i-have-date-output-the-time-from-a-different-timezone)
