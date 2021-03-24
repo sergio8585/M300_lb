@@ -101,6 +101,10 @@ Danach geben Sie den Link im Browser ein und öffnen die Seite.
 
 ![Testing_2](https://github.com/sergio8585/M300_lb/blob/faa9e85a81b288701bb66d5c5799b9ebf0743845/Images/Testing_2.PNG)
 
+Nach erneutem Laden sieht man, dass sich die Zeit geändert hat.
+
+![Testing_2](https://github.com/sergio8585/M300_lb/blob/be67b1eddfdee61e5f70379bdf29ed79cb5d669f/Images/Testing_3.PNG)
+
 ## Quellenverzeichnis <a name="Quellen"></a>
 
 -Template für Vagrantfile
