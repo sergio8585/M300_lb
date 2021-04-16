@@ -1,0 +1,114 @@
+Fri Mar 26 08:08:01 Zuerich 2021
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  1.1  37728  5788 ?        Ss   Mar24   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Mar24   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Mar24   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    Mar24   0:01 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Mar24   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Mar24   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    Mar24   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    Mar24   0:00 [watchdog/1]
+root        12  0.0  0.0      0     0 ?        S    Mar24   0:00 [migration/1]
+root        13  0.0  0.0      0     0 ?        S    Mar24   0:00 [ksoftirqd/1]
+root        15  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kworker/1:0H]
+root        16  0.0  0.0      0     0 ?        S    Mar24   0:00 [kdevtmpfs]
+root        17  0.0  0.0      0     0 ?        S<   Mar24   0:00 [netns]
+root        18  0.0  0.0      0     0 ?        S<   Mar24   0:00 [perf]
+root        19  0.0  0.0      0     0 ?        S    Mar24   0:00 [khungtaskd]
+root        20  0.0  0.0      0     0 ?        S<   Mar24   0:00 [writeback]
+root        21  0.0  0.0      0     0 ?        SN   Mar24   0:00 [ksmd]
+root        22  0.0  0.0      0     0 ?        S<   Mar24   0:00 [crypto]
+root        23  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kintegrityd]
+root        24  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        25  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kblockd]
+root        26  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ata_sff]
+root        27  0.0  0.0      0     0 ?        S<   Mar24   0:00 [md]
+root        28  0.0  0.0      0     0 ?        S<   Mar24   0:00 [devfreq_wq]
+root        33  0.0  0.0      0     0 ?        S    Mar24   0:00 [kswapd0]
+root        34  0.0  0.0      0     0 ?        S<   Mar24   0:00 [vmstat]
+root        35  0.0  0.0      0     0 ?        S    Mar24   0:00 [fsnotify_mark]
+root        36  0.0  0.0      0     0 ?        S    Mar24   0:00 [ecryptfs-kthrea]
+root        52  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kthrotld]
+root        53  0.0  0.0      0     0 ?        S<   Mar24   0:00 [acpi_thermal_pm]
+root        54  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        55  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        56  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        57  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        58  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        59  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        60  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        61  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root        62  0.0  0.0      0     0 ?        S    Mar24   0:00 [scsi_eh_0]
+root        63  0.0  0.0      0     0 ?        S<   Mar24   0:00 [scsi_tmf_0]
+root        64  0.0  0.0      0     0 ?        S    Mar24   0:00 [scsi_eh_1]
+root        65  0.0  0.0      0     0 ?        S<   Mar24   0:00 [scsi_tmf_1]
+root        71  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ipv6_addrconf]
+root        84  0.0  0.0      0     0 ?        S<   Mar24   0:00 [deferwq]
+root        85  0.0  0.0      0     0 ?        S<   Mar24   0:00 [charger_manager]
+root       128  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kpsmoused]
+root       150  0.0  0.0      0     0 ?        S<   Mar24   0:00 [mpt_poll_0]
+root       151  0.0  0.0      0     0 ?        S<   Mar24   0:00 [mpt/0]
+root       154  0.0  0.0      0     0 ?        S    Mar24   0:00 [scsi_eh_2]
+root       155  0.0  0.0      0     0 ?        S<   Mar24   0:00 [scsi_tmf_2]
+root       156  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root       157  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root       258  0.0  0.0      0     0 ?        S<   Mar24   0:00 [raid5wq]
+root       288  0.0  0.0      0     0 ?        S<   Mar24   0:00 [bioset]
+root       309  0.0  0.0      0     0 ?        S    Mar24   0:00 [jbd2/sda1-8]
+root       310  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ext4-rsv-conver]
+root       380  0.0  0.5  27704  2796 ?        Ss   Mar24   0:01 /lib/systemd/systemd-journald
+root       399  0.0  0.0      0     0 ?        S<   Mar24   0:00 [iscsi_eh]
+root       401  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ib_addr]
+root       402  0.0  0.0      0     0 ?        S    Mar24   0:00 [kauditd]
+root       403  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ib_mcast]
+root       404  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ib_nl_sa_wq]
+root       406  0.0  0.0      0     0 ?        S<   Mar24   0:00 [ib_cm]
+root       407  0.0  0.0      0     0 ?        S<   Mar24   0:00 [iw_cm_wq]
+root       408  0.0  0.0      0     0 ?        S<   Mar24   0:00 [rdma_cm]
+root       417  0.0  0.3  94768  1688 ?        Ss   Mar24   0:00 /sbin/lvmetad -f
+root       458  0.0  0.6  42312  3340 ?        Ss   Mar24   0:00 /lib/systemd/systemd-udevd
+root       476  0.0  0.0      0     0 ?        S<   Mar24   0:00 [iprt-VBoxWQueue]
+root       664  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kworker/1:1H]
+root       696  0.0  0.0      0     0 ?        S<   Mar24   0:00 [kworker/0:1H]
+root       863  0.0  0.5  16116  2968 ?        Ss   Mar24   0:00 /sbin/dhclient -1 -v -pf /run/dhclient.enp0s3.pid -lf /var/lib/dhcp/dhclient.enp0s3.leases -I -df /var/lib/dhcp/dhclient6.enp0s3.leases enp0s3
+root      1021  0.0  0.2  95364  1456 ?        Ssl  Mar24   0:00 /usr/bin/lxcfs /var/lib/lxcfs/
+syslog    1024  0.0  0.5 256388  2936 ?        Ssl  Mar24   0:00 /usr/sbin/rsyslogd -n
+root      1025  0.0  1.1 272940  5648 ?        Ssl  Mar24   0:01 /usr/lib/accountsservice/accounts-daemon
+root      1054  0.0  0.5  28620  2824 ?        Ss   Mar24   0:00 /lib/systemd/systemd-logind
+message+  1057  0.0  0.6  42892  3296 ?        Ss   Mar24   0:05 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+daemon    1087  0.0  0.4  26040  2020 ?        Ss   Mar24   0:00 /usr/sbin/atd -f
+root      1089  0.0  0.2   4392  1216 ?        Ss   Mar24   0:00 /usr/sbin/acpid
+root      1091  0.0  0.4  26064  2436 ?        Ss   Mar24   0:00 /usr/sbin/cron -f
+root      1110  0.0  0.0   5216   144 ?        Ss   Mar24   0:03 /sbin/iscsid
+root      1111  0.0  0.7   5716  3512 ?        S<Ls Mar24   0:16 /sbin/iscsid
+root      1127  0.0  3.1 171708 15844 ?        Ssl  Mar24   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root      1131  0.0  0.0  13368   140 ?        Ss   Mar24   0:00 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonise --scan --syslog
+root      1133  0.0  1.1 277176  5536 ?        Ssl  Mar24   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root      1175  0.0  0.5 310932  2652 ?        Sl   Mar24   0:20 /usr/sbin/VBoxService
+root      1205  0.0  0.3  12836  1528 ttyS0    Ss+  Mar24   0:00 /sbin/agetty --keep-baud 115200 38400 9600 ttyS0 vt220
+root      1208  0.0  0.6  65828  3388 tty1     Ss   Mar24   0:00 /bin/login --
+root      1227  0.0  0.0  19468   224 ?        Ss   Mar24   0:02 /usr/sbin/irqbalance --pid=/var/run/irqbalance.pid
+root      1274  0.0  0.6  65508  3096 ?        Ss   Mar24   0:00 /usr/sbin/sshd -D
+root      2882  0.0  0.8  71580  4420 ?        Ss   Mar24   0:04 /usr/sbin/apache2 -k start
+www-data  2885  0.0  0.7 491944  3800 ?        Sl   Mar24   0:31 /usr/sbin/apache2 -k start
+www-data  2886  0.0  0.8 426360  4164 ?        Sl   Mar24   0:31 /usr/sbin/apache2 -k start
+vagrant   3087  0.0  0.9  45316  4636 ?        Ss   Mar24   0:00 /lib/systemd/systemd --user
+vagrant   3088  0.0  0.3  61180  1860 ?        S    Mar24   0:00 (sd-pam)
+vagrant   3095  0.0  1.0  21408  5160 tty1     S+   Mar24   0:00 -bash
+root      7284  0.0  0.0      0     0 ?        S    Mar25   0:11 [kworker/0:1]
+root     10902  0.0  0.0      0     0 ?        S    Mar25   0:00 [kworker/1:2]
+root     11114  0.0  0.0      0     0 ?        S    Mar25   0:05 [kworker/0:2]
+root     12956  0.0  0.0      0     0 ?        S    03:55   0:00 [kworker/1:1]
+root     13236  0.0  0.0      0     0 ?        S    04:50   0:00 [kworker/u4:2]
+root     13665  0.0  0.0      0     0 ?        S    06:14   0:00 [kworker/u4:1]
+root     13924  0.0  0.1   4500   704 ?        Ss   07:06   0:00 /bin/sh /usr/lib/apt/apt.systemd.daily update
+root     13929  0.0  0.0      0     0 ?        S    07:06   0:00 [kworker/1:0]
+root     13934  0.0  0.3   4500  1724 ?        S    07:06   0:00 /bin/sh /usr/lib/apt/apt.systemd.daily lock_is_held update
+root     13964  0.0  1.3  57020  6952 ?        S    07:06   0:00 apt-get -qq -y update
+_apt     13967  0.0  1.2  56472  6216 ?        S    07:06   0:00 /usr/lib/apt/methods/http
+_apt     13968  0.0  1.2  56472  6276 ?        S    07:06   0:00 /usr/lib/apt/methods/http
+root     13979  0.0  0.5  47276  2872 ?        S    07:08   0:00 /usr/sbin/CRON -f
+root     13980  0.0  0.1   4500   852 ?        Ss   07:08   0:00 /bin/sh -c /cronscript/run-cronjob.sh
+root     13981  0.0  0.1   4500   796 ?        S    07:08   0:00 /bin/sh /cronscript/run-cronjob.sh
+root     13983  0.0  0.6  36080  3252 ?        R    07:08   0:00 ps aux
