@@ -8,37 +8,57 @@
 6. [Quellenverzechnis](#Quellen)
 
 ## Einleitung <a name="Einleitung"></a>
-Am 05.02.2021 durfte die ST18d mit dem neuen Modul "Plattformübergreifende Dienste im Netzwerk integrieren" beginnen. Zu Beginn gab es eine intensive Einführung und dazu haben wir die Toolumgebung aufgesetzt. Dies war die Voraussetzung für die LB2. 
 
-Da wir nun die nötigen Informationen zur LB2 erhalten haben, stand uns grundsätzlich nichts mehr im Wege mit dem Projekt zu starten.
+Da wir nun die LB2 erfolgreich durchgeführt haben, kam die LB3 an die Reihe. Das Thema DOcker war für mich noch etwas anspruchsvoller wie das Vorherige. Jedoch habe ich mir so viel Mühe gegeben, wie nur möglich.
 
-Ich habe mich dafür entschieden, einen Webserver mit Ubuntu zu ertsellen. Das Projekt war nicht allzu kompliziert, jedoch erfüllt es seinen Zweck. Eine VM (Virtualbox) wird nach dem "vagrant up" Befehl gestartet. Danach wird ein Skript erstellt, welches die Systemprozesse anzeigt. Dazu kommt dass die Daten mit Hilfe eines Cronjob immer aktuell bleiben.
+Da ich etwas Mühe mit der Themenwahl hatte, hat mir Herr Berger das Thema vorgegeben und zwar MariaDB.
+
+Die LB3 beinhaltet im Container 2 VMs, eine Maria Datenbank und das phpMyAdmin, welches für die Verwaltung zuständig ist.
 
 ## Tutorial <a name="Tutorial"></a>
 
-- Gitbash öffnen und ins Verzeichnis (/c/repository/M300_lb) gehen. Dort gibt man dann nur noch den Befehl "vagrant up" aus.
+- Gitbash öffnen und ins Verzeichnis (/c/repository/M300_lb/lb3) gehen. 
 
-- Danach öffnet man z.B. Chrome und gibt in der Suchleiste http://localhost:8080/prozesse ein. 
+- Danach gibt man den Befehl "docker-compose up" ein.
 
-- Mit "vagrant destroy" wird die Maschine gelöscht.
+- Danach öffnet man z.B. Chrome und gibt in der Suchleiste http://localhost:8080 ein. 
+
+- Username: root
+  Passwort: root
+
+- Zum Schluss kann man den Befehl "docker-compose down" eingeben um den Container herunterzufahren
 
 ## Code im Detail <a name="Code"></a>
 
-**Vagrant.configure(2) do |config|**
+**version: "2"**
 
-Konfiguration der Vagrantbox wird gestartet. Die 2 steht für die neuste Version von Vagrant.
+Mit Version 2 wird die Version des Files festgelegt.
 
-**config.vm.box = "ubuntu/xenial64"**
+**networks:**
+      **v_net:**
+          **ipam:**
+              **driver: default**
+              **config:**
+                  **- subnet: 192.168.60.0/24**
 
-Die VM hat das Betriebssystem Ubuntu/Xenial 64-Bit.
+Nun haben wir das Subnetz **192.168.60.0/24** definiert.
 
-**config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true**
+**services:**
 
-Dieser Befehl ist für die Portweiterleitung zuständig. Port 80 = VM und Port 8080 = Hostsystem. **auto_correct: true** ist dafür zuständig, dass mögliche Kollisionen automatisch korrigiert werden.
+Nun werden die services (2) im Container dokumentiert und beschrieben.
 
-**config.vm.synced_folder ".", "/var/www/html"**
+**db:**
+         **image: mariadb**
+         **environment:**
+              **- MYSQL_ROOT_PASSWORD=root**
+              **- MYSQL_DATABASE=defaultdb**
+         **volumes:**
+              **- ./database:/var/lib/mysql**
+         **networks:**
+          **v_net:**
+              **ipv4_address: 192.168.60.100**
 
-Die Files aus /var/www/html sind auch auf dem Hossystem im Ordner mit dem Vagrantfile gespeichert.
+Nun definieren wir den DB-Service. Das Passwort und der Name der Datenbank werden hier angegeben.
 
 **config.vm.provider "virtualbox" do |vb|**
 
