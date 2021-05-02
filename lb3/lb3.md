@@ -2,10 +2,9 @@
 
 ## Inhaltsverzechnis
 1. [Einleitung](#Einleitung)
-2. [Grafische Übersicht mit Visio](#Visio)
-3. [Ablauf](#Ablauf)
-4. [Code im Detail](#Code)
-5. [Testen](#testen)
+2. [Tutorial](#Tutorial)
+3. [Code im Detail](#Code)
+5. [Testing](#testen)
 6. [Quellenverzechnis](#Quellen)
 
 ## Einleitung <a name="Einleitung"></a>
@@ -15,10 +14,7 @@ Da wir nun die nötigen Informationen zur LB2 erhalten haben, stand uns grundsä
 
 Ich habe mich dafür entschieden, einen Webserver mit Ubuntu zu ertsellen. Das Projekt war nicht allzu kompliziert, jedoch erfüllt es seinen Zweck. Eine VM (Virtualbox) wird nach dem "vagrant up" Befehl gestartet. Danach wird ein Skript erstellt, welches die Systemprozesse anzeigt. Dazu kommt dass die Daten mit Hilfe eines Cronjob immer aktuell bleiben.
 
-## Grafische Übersicht mit Visio <a name="Visio"></a>
-![Grafische Übersicht](https://github.com/sergio8585/M300_lb/blob/9f62754186925a6a41e3c6084ae79c1137e1e9d7/Images/LB2_M300_Visio.PNG)
-
-## Ablauf <a name="Ablauf"></a>
+## Tutorial <a name="Tutorial"></a>
 
 - Gitbash öffnen und ins Verzeichnis (/c/repository/M300_lb) gehen. Dort gibt man dann nur noch den Befehl "vagrant up" aus.
 
@@ -91,7 +87,7 @@ Script wird ausgeführt und Ergebnisse direkt herausgegeben.
 
 Cronjob ist zuständig für das automatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
 
-## Testen <a name="testen"></a>
+## Testing <a name="testen"></a>
 
 Zuerst öffnen Sie Gitbash und gehen ins gewünschte Verzechnis (/c/repository/M300_lb). Danach Befehl "Vagrant Up" eingeben:
 
