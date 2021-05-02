@@ -51,82 +51,43 @@ Nun werden die services (2) im Container dokumentiert und beschrieben.
          **image: mariadb**
          **environment:**
               **- MYSQL_ROOT_PASSWORD=root**
-              **- MYSQL_DATABASE=defaultdb**
+              **- MYSQL_DATABASE=LB*_DB**
          **volumes:**
               **- ./database:/var/lib/mysql**
          **networks:**
           **v_net:**
               **ipv4_address: 192.168.60.100**
 
-Nun definieren wir den DB-Service. Das Passwort und der Name der Datenbank werden hier angegeben.
+Nun definieren wir den DB-Service. Das Passwort und der Name der Datenbank werden hier angegeben. In volumes werden gesyncte Ordner definiert. Zum Schluss werden wir die IP-Adresse definieren.
 
-**config.vm.provider "virtualbox" do |vb|**
+**phpmyadmin:**
+     **image: phpmyadmin/phpmyadmin**
+     **container_name: phpmyadmin**
+     **environment:**
+         **- PMA_HOST=db**
+     **restart: always**
+     **ports:**
+         **- 8080:80**
+     **volumes:**
+         **- /sessions**
+     **links:**
+         **- db**
+     **networks:**
+       **v_net:**
+           **ipv4_address: 192.168.60.101**
 
-Hypervisor wird definiert (Virtualbox). Konfiguration in Virtualbox wird gestaret.
-
-**vb.memory = "512"**
-
-RAM wird festgelegt (512MB).
-
-**config.vm.provision "shell", inline: <<-SHELL**
-
-Konfiguration wird in der Linuxkonsole gestartet.
-
-**sudo apt-get update**
-**sudo apt-get -y install apache2**
-
-Übliche Befehle in Linux. Appkatalog wird zuerst aktualisiert und danach Apache installiert.
-
-**cd /**
-**mkdir bashscripts**
-**cd bashscripts**
-
-Mit dem ersten Befehl wird ins Root-Verzeichnis geweschselt. Danach den Ordner "bashscripts." Mit dem dritten Befehl wechselt man ins Verzechnis.
-
-**touch dateproc.sh**
-
-Ein neues Shell-Script wird ertsellt.
-
-**echo "env TZ=CET-1 date > /var/www/html/prozesse" > dateproc.sh**
-
-Die aktuelle Zeit wird in Zentraleuropäischerzeit in das File "Prozesse" geschrieben. Vorheriger Inhalt wird überschrieben.
-
-**echo "ps aux >> /var/www/html/prozesse" >> dateproc.sh**
-
-Die Systemprozesse werden in "Prozesse" übernommen.
-
-**chmod +x /bashscripts/dateproc.sh**
-
-Rechte auf das Script. (Executable-Rechte)
-
-**./dateproc.sh**
-
-Script wird ausgeführt und Ergebnisse direkt herausgegeben.
-
-**crontab -l | { cat; echo "*/ * * * * /bashscripts/dateproc.sh"; } | crontab -**
-
-Cronjob ist zuständig für das automatische Ausführen des Scripts. Aufgrund der 5 Sterne, wird das Skript alle 5 Minuten ausgeführt.
+Nun definieren wir den phpMyAdmin service. Die Variable PMA_HOST ist für das Festlegen des db-Service zuständig. Mit Ports: wird die Portweiterleitung von 80 auf 8080 definiert. Zum Schluss haben wir noch im v_net die IP-Adresse (192.168.60.101) angegeben. 
 
 ## Testing <a name="testen"></a>
 
-Zuerst öffnen Sie Gitbash und gehen ins gewünschte Verzechnis (/c/repository/M300_lb). Danach Befehl "Vagrant Up" eingeben:
-
-![Testing_1](https://github.com/sergio8585/M300_lb/blob/f92e956773e8938aa67d30476bd7f8e704c67b93/Images/Testing_1.PNG)
-
-Danach geben Sie den Link im Browser ein und öffnen die Seite. 
-
-![Testing_2](https://github.com/sergio8585/M300_lb/blob/faa9e85a81b288701bb66d5c5799b9ebf0743845/Images/Testing_2.PNG)
-
-Nach erneutem Laden sieht man, dass sich die Zeit geändert hat.
-
-![Testing_2](https://github.com/sergio8585/M300_lb/blob/be67b1eddfdee61e5f70379bdf29ed79cb5d669f/Images/Testing_3.PNG)
+| Nummer | Are           | Cool  |
+| ------ |:-------------:| -----:|
+| 1      | right-aligned | $1600 |
+| 2      | centered      |   $12 |
+| 3      |               |    $1 |
 
 ## Quellenverzeichnis <a name="Quellen"></a>
 
-- M300 Web-Template link: (https://github.com/mc-b/M300/tree/master/vagrant/web)
+- Docker Compose: (https://docs.docker.com/compose/gettingstarted/)
 
-- Markdown Basic Syntax Link: (https://www.markdownguide.org/basic-syntax/)
-
-- Cronjob Link: (https://stackoverflow.com/questions/878600/how-to-create-a-cron-job-using-bash-automatically-without-the-interactive-editor)
-
-- Zeitzonen Command Link: (https://unix.stackexchange.com/questions/48101/how-can-i-have-date-output-the-time-from-a-different-timezone)
+_ Markdown basic Syntax: (https://www.markdownguide.org/basic-syntax/)
