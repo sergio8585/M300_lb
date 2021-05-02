@@ -23,8 +23,7 @@ Die LB3 beinhaltet im Container 2 VMs, eine Maria Datenbank und das phpMyAdmin, 
 
 - Danach öffnet man z.B. Chrome und gibt in der Suchleiste http://localhost:8080 ein. 
 
-- Username: root
-  Passwort: root
+- Username: root & Passwort: root
 
 - Zum Schluss kann man den Befehl "docker-compose down" eingeben um den Container herunterzufahren
 
