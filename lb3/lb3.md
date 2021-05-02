@@ -1,4 +1,4 @@
-![Titelblatt_M300_LB3](Images/M300_LB3_Titelblatt.png)
+![Titelblatt_M300_LB3](C:\repository\M300_lb\Images\M300_LB3_Titelblatt.png)
 
 ## Inhaltsverzechnis
 1. [Einleitung](#Einleitung)
