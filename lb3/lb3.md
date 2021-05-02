@@ -30,33 +30,41 @@ Die LB3 beinhaltet im Container 2 VMs, eine Maria Datenbank und das phpMyAdmin, 
 
 ## Code im Detail <a name="Code"></a>
 
--     **version: "2"**
+>```
+>version: "2"
+>```
 
 Mit Version 2 wird die Version des Files festgelegt.
 
--     **networks:**
--     **v_net:**
--     **ipam:**
--     **driver: default**
--     **config:**
--     **- subnet: 192.168.60.0/24**
+>```
+> networks:
+>     v_net:
+>         ipam:
+>             driver: default
+>             config:
+>                 - subnet: 192.168.60.0/24
+>```
 
 Nun haben wir das Subnetz **192.168.60.0/24** definiert.
 
--     **services:**
+>```
+>services:
+>```
 
 Nun werden die services (2) im Container dokumentiert und beschrieben.
 
--     **db:**
--     **image: mariadb**
--     **environment:**
--     **- MYSQL_ROOT_PASSWORD=root**
--     **- MYSQL_DATABASE=LB*_DB**
--     **volumes:**
--     **- ./database:/var/lib/mysql**
--     **networks:**
--     **v_net:**
--     **ipv4_address: 192.168.60.100**
+>```
+>db:
+>       image: mariadb
+>         environment:
+>             - MYSQL_ROOT_PASSWORD=root
+>              - MYSQL_DATABASE=LB3_DB
+>         volumes:
+>              - ./database:/var/lib/mysql
+>         networks:
+>          v_net:
+>              ipv4_address: 192.168.60.100
+>```
 
 Nun definieren wir den DB-Service. Das Passwort und der Name der Datenbank werden hier angegeben. In volumes werden gesyncte Ordner definiert. Zum Schluss werden wir die IP-Adresse definieren.
 
