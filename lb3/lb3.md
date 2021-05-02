@@ -34,12 +34,12 @@ Die LB3 beinhaltet im Container 2 VMs, eine Maria Datenbank und das phpMyAdmin, 
 
 Mit Version 2 wird die Version des Files festgelegt.
 
-- **networks:**
--      **v_net:**
--         **ipam:**
--            **driver: default**
--             **config:**
--                 **- subnet: 192.168.60.0/24**
+-     **networks:**
+-     **v_net:**
+-     **ipam:**
+-     **driver: default**
+-     **config:**
+-     **- subnet: 192.168.60.0/24**
 
 Nun haben wir das Subnetz **192.168.60.0/24** definiert.
 
