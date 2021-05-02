@@ -80,14 +80,15 @@ Nun definieren wir den phpMyAdmin service. Die Variable PMA_HOST ist für das Fe
 
 ## Testing <a name="testen"></a>
 
-| Nummer | Are           | Cool  |
-| ------ |:-------------:| -----:|
-| 1      | right-aligned | $1600 |
-| 2      | centered      |   $12 |
-| 3      |               |    $1 |
+| Nummer | Eingabe                                      | Resultat                          |
+| ------ |:--------------------------------------------:| ---------------------------------:|
+| 1      | Befehl: docker-compose up                    | Container startet                 |
+| 2      | Im Browser http:/localhost:8080 eingeben     | Loginfenster erscheint            |
+| 3      | Passwort (root) und Username (root) eingeben | Login erfolgreich                 |
+| 4      | Mit docker-compose down den Container löschen| Docker werden tatsächlich gelöscht|
 
 ## Quellenverzeichnis <a name="Quellen"></a>
 
 - Docker Compose: (https://docs.docker.com/compose/gettingstarted/)
 
-_ Markdown basic Syntax: (https://www.markdownguide.org/basic-syntax/)
+- Markdown basic Syntax: (https://www.markdownguide.org/basic-syntax/)
