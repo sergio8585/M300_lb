@@ -1,0 +1,34 @@
+version: "2"
+services:
+  db:
+      image: mariadb
+      environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - MYSQL_DATABASE=radio
+      volumes:
+          - ./database:/var/lib/mysql
+      networks:
+        v_net:
+            ipv4_address: 192.168.60.100
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      environment:
+          - PMA_HOST=db
+      restart: always
+      ports:
+          - 8080:80
+      volumes:
+          - /sessions
+      links:
+          - db
+      networks:
+        v_net:
+            ipv4_address: 192.168.60.101
+            
+networks:
+    v_net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.60.0/24
