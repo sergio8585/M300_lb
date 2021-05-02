@@ -30,7 +30,7 @@ Die LB3 beinhaltet im Container 2 VMs, eine Maria Datenbank und das phpMyAdmin, 
 
 ## Code im Detail <a name="Code"></a>
 
-**version: "2"**
+-     **version: "2"**
 
 Mit Version 2 wird die Version des Files festgelegt.
 
@@ -43,38 +43,38 @@ Mit Version 2 wird die Version des Files festgelegt.
 
 Nun haben wir das Subnetz **192.168.60.0/24** definiert.
 
-**services:**
+-     **services:**
 
 Nun werden die services (2) im Container dokumentiert und beschrieben.
 
-**db:**
-         **image: mariadb**
-         **environment:**
-              **- MYSQL_ROOT_PASSWORD=root**
-              **- MYSQL_DATABASE=LB*_DB**
-         **volumes:**
-              **- ./database:/var/lib/mysql**
-         **networks:**
-          **v_net:**
-              **ipv4_address: 192.168.60.100**
+-     **db:**
+-     **image: mariadb**
+-     **environment:**
+-     **- MYSQL_ROOT_PASSWORD=root**
+-     **- MYSQL_DATABASE=LB*_DB**
+-     **volumes:**
+-     **- ./database:/var/lib/mysql**
+-     **networks:**
+-     **v_net:**
+-     **ipv4_address: 192.168.60.100**
 
 Nun definieren wir den DB-Service. Das Passwort und der Name der Datenbank werden hier angegeben. In volumes werden gesyncte Ordner definiert. Zum Schluss werden wir die IP-Adresse definieren.
 
-**phpmyadmin:**
-**image: phpmyadmin/phpmyadmin**
-**container_name: phpmyadmin**
-**environment:**
-**- PMA_HOST=db**
-**restart: always**
-**ports:**
-**- 8080:80**
-**volumes:**
-**- /sessions**
-**links:**
-**- db**
-**networks:**
-**v_net:**
-**ipv4_address: 192.168.60.101**
+-     **phpmyadmin:**
+-     **image: phpmyadmin/phpmyadmin**
+-     **container_name: phpmyadmin**
+-     **environment:**
+-     **- PMA_HOST=db**
+-     **restart: always**
+-     **ports:**
+-     **- 8080:80**
+-     **volumes:**
+-     **- /sessions**
+-     **links:**
+-     **- db**
+-     **networks:**
+-     **v_net:**
+-     **ipv4_address: 192.168.60.101**
 
 Nun definieren wir den phpMyAdmin service. Die Variable PMA_HOST ist für das Festlegen des db-Service zuständig. Mit Ports: wird die Portweiterleitung von 80 auf 8080 definiert. Zum Schluss haben wir noch im v_net die IP-Adresse (192.168.60.101) angegeben. 
 
